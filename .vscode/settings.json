@@ -1,0 +1,25 @@
+{
+    "files.associations": {
+        "aisimage.h": "c",
+        "image.h": "c",
+        "imagetool.h": "c",
+        "sha1.h": "c",
+        "common.h": "c",
+        "types.h": "c",
+        "lab126_boards_info.h": "c",
+        "part_efi.h": "c",
+        "lab126_partitions_def.h": "c",
+        "amzn_secure_boot.h": "c",
+        "amzn_unlock.h": "c",
+        "config_cmd_default.h": "c",
+        "mx6sl_abc123_android.h": "c",
+        "fastboot.h": "c",
+        "ctype.h": "c",
+        "idme.h": "c",
+        "sparse_format.h": "c",
+        "environment.h": "c",
+        "nand.h": "c",
+        "command.h": "c",
+        "malloc.h": "c"
+    }
+}

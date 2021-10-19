@@ -1,0 +1,90 @@
+/*
+ * Copyright (C) 2010-2012 Freescale Semiconductor, Inc.
+ *
+ * See file CREDITS for list of people who contributed to this
+ * project.
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License as
+ * published by the Free Software Foundation; either version 2 of
+ * the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston,
+ * MA 02111-1307 USA
+ */
+
+#ifndef _IOMUX_REGISTER_H_
+#define _IOMUX_REGISTER_H_
+
+#include "common.h"
+
+#define GPR_BASE_ADDR (IOMUXC_BASE_ADDR + 0x0) // 0x0
+#define OBSRV_BASE_ADDR (GPR_BASE_ADDR + 0x38) // 0x38
+#define SW_MUX_BASE_ADDR (OBSRV_BASE_ADDR + 0x14) // 0x4c
+#define SW_PAD_BASE_ADDR (SW_MUX_BASE_ADDR + 0x258) // 0x2a4
+#define SW_GRP_BASE_ADDR (SW_PAD_BASE_ADDR + 0x308) // 0x5ac
+#define SW_INPUT_PORT_BASE_ADDR (SW_GRP_BASE_ADDR + 0x30) // 0x5dc
+#define SELECT_INPUT_BASE_ADDR (SW_INPUT_PORT_BASE_ADDR + 0x0) // 0x5dc
+
+#define IOMUXC_SW_MUX_CTL_PAD_PWM1 (SW_MUX_BASE_ADDR + 0x1d4) // 0x220
+
+#define IOMUXC_SW_PAD_CTL_PAD_DRAM_A0 (SW_PAD_BASE_ADDR + 0x1c) // 0x2c0
+#define IOMUXC_SW_PAD_CTL_PAD_DRAM_A1 (SW_PAD_BASE_ADDR + 0x20) // 0x2c4
+#define IOMUXC_SW_PAD_CTL_PAD_DRAM_A10 (SW_PAD_BASE_ADDR + 0x24) // 0x2c8
+#define IOMUXC_SW_PAD_CTL_PAD_DRAM_A11 (SW_PAD_BASE_ADDR + 0x28) // 0x2cc
+#define IOMUXC_SW_PAD_CTL_PAD_DRAM_A12 (SW_PAD_BASE_ADDR + 0x2c) // 0x2d0
+#define IOMUXC_SW_PAD_CTL_PAD_DRAM_A13 (SW_PAD_BASE_ADDR + 0x30) // 0x2d4
+#define IOMUXC_SW_PAD_CTL_PAD_DRAM_A14 (SW_PAD_BASE_ADDR + 0x34) // 0x2d8
+#define IOMUXC_SW_PAD_CTL_PAD_DRAM_A15 (SW_PAD_BASE_ADDR + 0x38) // 0x2dc
+#define IOMUXC_SW_PAD_CTL_PAD_DRAM_A2 (SW_PAD_BASE_ADDR + 0x3c) // 0x2e0
+#define IOMUXC_SW_PAD_CTL_PAD_DRAM_A3 (SW_PAD_BASE_ADDR + 0x40) // 0x2e4
+#define IOMUXC_SW_PAD_CTL_PAD_DRAM_A4 (SW_PAD_BASE_ADDR + 0x44) // 0x2e8
+#define IOMUXC_SW_PAD_CTL_PAD_DRAM_A5 (SW_PAD_BASE_ADDR + 0x48) // 0x2ec
+#define IOMUXC_SW_PAD_CTL_PAD_DRAM_A6 (SW_PAD_BASE_ADDR + 0x4c) // 0x2f0
+#define IOMUXC_SW_PAD_CTL_PAD_DRAM_A7 (SW_PAD_BASE_ADDR + 0x50) // 0x2f4
+#define IOMUXC_SW_PAD_CTL_PAD_DRAM_A8 (SW_PAD_BASE_ADDR + 0x54) // 0x2f8
+#define IOMUXC_SW_PAD_CTL_PAD_DRAM_A9 (SW_PAD_BASE_ADDR + 0x58) // 0x2fc
+#define IOMUXC_SW_PAD_CTL_PAD_DRAM_CAS (SW_PAD_BASE_ADDR + 0x5c) // 0x300
+#define IOMUXC_SW_PAD_CTL_PAD_DRAM_CS0 (SW_PAD_BASE_ADDR + 0x60) // 0x304
+#define IOMUXC_SW_PAD_CTL_PAD_DRAM_CS1 (SW_PAD_BASE_ADDR + 0x64) // 0x308
+#define IOMUXC_SW_PAD_CTL_PAD_DRAM_DQM0 (SW_PAD_BASE_ADDR + 0x68) // 0x30c
+#define IOMUXC_SW_PAD_CTL_PAD_DRAM_DQM1 (SW_PAD_BASE_ADDR + 0x6c) // 0x310
+#define IOMUXC_SW_PAD_CTL_PAD_DRAM_DQM2 (SW_PAD_BASE_ADDR + 0x70) // 0x314
+#define IOMUXC_SW_PAD_CTL_PAD_DRAM_DQM3 (SW_PAD_BASE_ADDR + 0x74) // 0x318
+#define IOMUXC_SW_PAD_CTL_PAD_DRAM_RAS (SW_PAD_BASE_ADDR + 0x78) // 0x31c
+#define IOMUXC_SW_PAD_CTL_PAD_DRAM_RESET (SW_PAD_BASE_ADDR + 0x7c) // 0x320
+#define IOMUXC_SW_PAD_CTL_PAD_DRAM_SDBA0 (SW_PAD_BASE_ADDR + 0x80) // 0x324
+#define IOMUXC_SW_PAD_CTL_PAD_DRAM_SDBA1 (SW_PAD_BASE_ADDR + 0x84) // 0x328
+#define IOMUXC_SW_PAD_CTL_PAD_DRAM_SDBA2 (SW_PAD_BASE_ADDR + 0x88) // 0x32c
+#define IOMUXC_SW_PAD_CTL_PAD_DRAM_SDCKE0 (SW_PAD_BASE_ADDR + 0x8c) // 0x330
+#define IOMUXC_SW_PAD_CTL_PAD_DRAM_SDCKE1 (SW_PAD_BASE_ADDR + 0x90) // 0x334
+#define IOMUXC_SW_PAD_CTL_PAD_DRAM_SDCLK_0 (SW_PAD_BASE_ADDR + 0x94) // 0x338
+#define IOMUXC_SW_PAD_CTL_PAD_DRAM_SDODT0 (SW_PAD_BASE_ADDR + 0x98) // 0x33c
+#define IOMUXC_SW_PAD_CTL_PAD_DRAM_SDODT1 (SW_PAD_BASE_ADDR + 0x9c) // 0x340
+#define IOMUXC_SW_PAD_CTL_PAD_DRAM_SDQS0 (SW_PAD_BASE_ADDR + 0xa0) // 0x344
+#define IOMUXC_SW_PAD_CTL_PAD_DRAM_SDQS1 (SW_PAD_BASE_ADDR + 0xa4) // 0x348
+#define IOMUXC_SW_PAD_CTL_PAD_DRAM_SDQS2 (SW_PAD_BASE_ADDR + 0xa8) // 0x34c
+#define IOMUXC_SW_PAD_CTL_PAD_DRAM_SDQS3 (SW_PAD_BASE_ADDR + 0xac) // 0x350
+#define IOMUXC_SW_PAD_CTL_PAD_DRAM_SDWE (SW_PAD_BASE_ADDR + 0xb0) // 0x354
+
+#define IOMUXC_SW_PAD_CTL_GRP_ADDDS (SW_GRP_BASE_ADDR + 0x0) // 0x5ac
+#define IOMUXC_SW_PAD_CTL_GRP_DDRMODE_CTL (SW_GRP_BASE_ADDR + 0x4) // 0x5b0
+#define IOMUXC_SW_PAD_CTL_GRP_DDRPKE (SW_GRP_BASE_ADDR + 0x8) // 0x5b4
+#define IOMUXC_SW_PAD_CTL_GRP_DDRPK (SW_GRP_BASE_ADDR + 0xc) // 0x5b8
+#define IOMUXC_SW_PAD_CTL_GRP_DDRHYS (SW_GRP_BASE_ADDR + 0x10) // 0x5bc
+#define IOMUXC_SW_PAD_CTL_GRP_DDRMODE (SW_GRP_BASE_ADDR + 0x14) // 0x5c0
+#define IOMUXC_SW_PAD_CTL_GRP_B0DS (SW_GRP_BASE_ADDR + 0x18) // 0x5c4
+#define IOMUXC_SW_PAD_CTL_GRP_CTLDS (SW_GRP_BASE_ADDR + 0x1c) // 0x5c8
+#define IOMUXC_SW_PAD_CTL_GRP_B1DS (SW_GRP_BASE_ADDR + 0x20) // 0x5cc
+#define IOMUXC_SW_PAD_CTL_GRP_DDR_TYPE (SW_GRP_BASE_ADDR + 0x24) // 0x5d0
+#define IOMUXC_SW_PAD_CTL_GRP_B2DS (SW_GRP_BASE_ADDR + 0x28) // 0x5d4
+#define IOMUXC_SW_PAD_CTL_GRP_B3DS (SW_GRP_BASE_ADDR + 0x2c) // 0x5d8
+#endif
+
