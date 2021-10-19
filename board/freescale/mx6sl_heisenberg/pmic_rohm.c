@@ -293,7 +293,7 @@ int pmic_read_rtc_time(struct rtc_time* tm) {
  * LP_FASTBOOT_MAX_CNT times and each time within LP_FASTBOOT_THRESHOLD seconds
  */
 #define LP_FASTBOOT_THRESHOLD   15 /* wait time between resets in seconds */
-#define LP_FASTBOOT_MAX_CNT     4  /* number of resets require to go fastboot */
+#define LP_FASTBOOT_MAX_CNT     2  /* number of resets require to go fastboot */
 
 static int get_lp_press_time(void)
 {

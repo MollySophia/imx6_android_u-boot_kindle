@@ -675,7 +675,16 @@ void setup_fastboot_partitions_from_gpt() {
 	if (is_gpt_valid(dev_desc, GPT_PRIMARY_PARTITION_TABLE_LBA,
 				gpt_head, &gpt_pte) != 1) {
 		printf("%s: *** ERROR: Invalid GPT ***\n", __func__);
-		return;
+		printf("%s: *** Writing Partition Table... ***\n", __func__);
+		int cmd_repeatable;
+		char * cmd_args[5] = {"gpt", "write", "mmc", "1", NULL};
+		cmd_args[4] = getenv("partitions"); 
+		if(cmd_process(0, 5, cmd_args, &cmd_repeatable, NULL)) {
+			printf("%s: Failed to write partition table\n", __func__);
+			return;
+		}
+		char * cmd_reset[1] = {"reset"};
+		cmd_process(0, 1, cmd_reset, &cmd_repeatable, NULL);
 	}
 
 	struct fastboot_ptentry ptentry;
